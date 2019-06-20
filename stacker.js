@@ -80,17 +80,19 @@ function stopPiece(){
         for(let i = 0; i < bWidth; i++){
             if(board[curY][i] === 1 && board[curY+1][i] === 0){
                 board[curY][i] = 0;
-                drawSquare('gray', i, curY)
+                drawSquare('gray', i, curY);
                 curSize--;
                 console.log(curSize);
             }
         }
     }
 
+    velocity = 1;
+
     curY--;
     if(curY < 0)
-        endGame('You have won!')
-    curX = starts[curY]
+        endGame('You have won!');
+    curX = starts[curY];
 }
 
 
